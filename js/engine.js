@@ -51,7 +51,7 @@ function score_tail(){
 	var calibre = document.getElementById('calibre').value;
 	//-----------------------------------------------------
 	var tail = document.getElementById('counter_tail').innerHTML;
-	document.getElementById('counter_tail').innerHTML += 1;//parseInt(tail) + parseInt(calibre);
+	document.getElementById('counter_tail').innerHTML = parseInt(tail) + parseInt(calibre);
 }
 
 //Cargas completas de la web v韈tima efectuadas.
