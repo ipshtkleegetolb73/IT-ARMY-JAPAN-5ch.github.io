@@ -7,21 +7,17 @@ var state = 'stop';
 var shootRequest = {};
 
 //Modifica la URL para que tenga "http://" al principio.
+/*
 function httpValue(){
-	if ($('#target').val().substr(0,7) != "https:/") {
-		$('#target').val('https://'+$('#target').val());
-	}
-	else if ($('#target').val().substr(0,7) != "http://") {
+	if ($('#target').val().substr(0,7) != "http://") {
 		$('#target').val('http://'+$('#target').val());
 	}
 	
-	if ($('#hiveURL').val().substr(0,7) != "https:/") {
-		$('#hiveURL').val('https://'+$('#hiveURL').val());
-	}
-	else if ($('#hiveURL').val().substr(0,7) != "http://") {
+	if ($('#hiveURL').val().substr(0,7) != "http://") {
 		$('#hiveURL').val('http://'+$('#hiveURL').val());
 	}
 }
+*/
 
 //Modifica la URL para añadir los arrays.
 function arrayValue(url,type){
