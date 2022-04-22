@@ -11,8 +11,15 @@ function httpValue(){
 	if ($('#target').val().substr(0,7) != "http://") {
 		$('#target').val('http://'+$('#target').val());
 	}
+	else if ($('#target').val().substr(0,7) != "https://") {
+		$('#target').val('https://'+$('#target').val());
+	}
+	
 	if ($('#hiveURL').val().substr(0,7) != "http://") {
 		$('#hiveURL').val('http://'+$('#hiveURL').val());
+	}
+	else if ($('#hiveURL').val().substr(0,7) != "https://") {
+		$('#hiveURL').val('https://'+$('#hiveURL').val());
 	}
 }
 
