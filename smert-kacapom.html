@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="noindex, nofollow">
         <title>THOWC (Tashiro High Orbit Web Cannon)</title>
+        <meta name="description" content="Web版TOWCの改造版です。使いやすい。">
+        <meta name="keywords" content="田代砲,smert-kacapom,DDos,DoS,攻撃,ツール,5ch,ねらー,it-army-of-5ch">
+        <meta name="author" content="ウラジミール・プーチン大統領の叔父">
+        
+        <meta property="og:title" content="THOWC (Tashiro High Orbit Web Cannon)">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Web版TOWCの改造版です。使いやすい。">
+        <meta property="og:url" content="https://it-army-japan-5ch.github.io/smert-kacapom.html">
+        <!--[if lt IE 9]>
+            <script src="https://github.com/aFarkas/html5shiv/tree/master/src/html5shiv.js"></script>
+        <![endif]-->
+        
         <link href="css/style.css" media="all" rel="stylesheet" />
         <link href="css/mb.slider.css" media="all" rel="stylesheet" />
         <script src="js/jquery.js"></script>
@@ -20,11 +34,9 @@
         });
         </script>
         <script>
-        <!--
         function popupMsg(theMsg) {
             alert(theMsg);
         }
-        //-->
         </script>
         <script>
         var isNS = (navigator.appName == "Netscape") ? 1 : 0;
@@ -102,39 +114,36 @@
         </div>
         <p id="footer">Designed by ねらー | <a href="http://hoic.online/">http://hoic.online/</a></p>
         <script>
-        <!--
         //Disable right mouse click Script
         
         var message = "右クリックは禁止でちゅよm9(^Д^)ﾌﾟｷﾞｬｰ";
         
         ///////////////////////////////////
-        function clickIE4(){
+        function clickIE4() {
             if (event.button == 2){
                 alert(message);
                 return false;
             }
         }
 
-        function clickNS4(e){
-            if (document.layers||document.getElementById&&!document.all){
-                if (e.which==2||e.which==3){
+        function clickNS4(e) {
+            if (document.layers || document.getElementById&&!document.all) {
+                if (e.which == 2 || e.which == 3) {
                     alert(message);
                     return false;
                 }
             }
         }
 
-        if (document.layers){
+        if (document.layers) {
             document.captureEvents(Event.MOUSEDOWN);
             document.onmousedown=clickNS4;
         }
-        else if (document.all&&!document.getElementById){
+        else if (document.all&&!document.getElementById) {
             document.onmousedown=clickIE4;
         }
 
         document.oncontextmenu=new Function("alert(message);return false")
-
-        // --> 
         </script>
     </body>
 </html>
