@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <title>２５連打田代砲</title>
         <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
         <meta http-equiv="adimage" content="201">
         <meta http-equiv="adalign" content="right">
+        <title>２５連打田代砲</title>
         <meta name="keywords" content="田代砲,２５連打田代砲">
         <meta name="description" content="「田代砲」を強化したもので、25個ものインラインフレームでURL先を秒単位で自動更新します。">
+        <style>
+        body {
+            background-color: BLACK;
+            color: WHITE;
+        }
+        textarea {
+            overflow-y: scroll;
+        }
+        </style>
     </head>
-    <body text="WHITE" bgcolor="BLACK">
+    <body>
         <h1>２５連打田代砲 Ver0.6</h1><br>
-        <strong>「田代砲」</strong>を強化したもので、25個ものインラインフレームでURL先を秒単位で自動更新します。
+<strong>「田代砲」</strong>を強化したもので、25個ものインラインフレームでURL先を秒単位で自動更新します。
 <textarea>田代砲とは、
  初代田代砲は改良を重ねられ、現在では一般に「田代砲」と呼ばれるものには
  田代砲・超田代砲・超田代砲改・GaburiDuke（拡散田代砲）・連装田代砲
@@ -33,27 +42,27 @@
             <iframe name="chi2" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi3" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi4" data-ruffle-polyfilled="" width="50" height="50"></iframe>
-            <iframe name="chi5" data-ruffle-polyfilled="" width="50" height="50"></iframe><br clear="all">
+            <iframe name="chi5" data-ruffle-polyfilled="" width="50" height="50"></iframe><br style="clear: all;">
             <iframe name="chi6" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi7" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi8" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi9" data-ruffle-polyfilled="" width="50" height="50"></iframe>
-            <iframe name="chi10" data-ruffle-polyfilled="" width="50" height="50"></iframe><br clear="all">
+            <iframe name="chi10" data-ruffle-polyfilled="" width="50" height="50"></iframe><br style="clear: all;">
             <iframe name="chi11" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi12" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi13" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi14" data-ruffle-polyfilled="" width="50" height="50"></iframe>
-            <iframe name="chi15" data-ruffle-polyfilled="" width="50" height="50"></iframe><br clear="all">
+            <iframe name="chi15" data-ruffle-polyfilled="" width="50" height="50"></iframe><br style="clear: all;">
             <iframe name="chi16" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi17" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi18" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi19" data-ruffle-polyfilled="" width="50" height="50"></iframe>
-            <iframe name="chi20" data-ruffle-polyfilled="" width="50" height="50"></iframe><br clear="all">
+            <iframe name="chi20" data-ruffle-polyfilled="" width="50" height="50"></iframe><br style="clear: all;">
             <iframe name="chi21" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi22" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi23" data-ruffle-polyfilled="" width="50" height="50"></iframe>
             <iframe name="chi24" data-ruffle-polyfilled="" width="50" height="50"></iframe>
-            <iframe name="chi25" data-ruffle-polyfilled="" width="50" height="50"></iframe><br clear="all">
+            <iframe name="chi25" data-ruffle-polyfilled="" width="50" height="50"></iframe><br style="clear: all;">
           </form>
         </div>
         
@@ -89,7 +98,7 @@
                 top.chi25.location = uu;
                 
                 timeid = setTimeout("kR()", tt*1000);
-                document.f.sta.value="自動更新中("+ tt +"秒)　アクセス回数は"+25*(++ac)+"回です";
+                f.sta.value="自動更新中("+ tt +"秒)　アクセス回数は"+25*(++ac)+"回です";
             }
         }
         
@@ -106,8 +115,8 @@
                 kR();
             }
             else {
-                document.f.sta.value = "自動更新を停止しました。"
-            };
+                f.sta.value = "自動更新を停止しました。";
+            }
         }
         
         function key(){
