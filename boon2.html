@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <title>boon v3.7</title>
         <style>
         body {
@@ -19,100 +19,100 @@
             <center>
                 JavaScript Automatic Attacker<br><font size="6">boon</font> v3.7
                 <noscript>
-                    <hr width="350">JavaScript�ɑΉ������u���E�U���K�v�ł��B<hr width="350">
+                    <hr width="350">JavaScriptに対応したブラウザが必要です。<hr width="350">
                 </noscript>
                 <script>
                 /* --------------------------------------------------
-                    �t�H�[����������
+                    フォームここから
                 --------------------------------------------------- */
                 
                 document.write('<form name="x">'+
-                    'Time: <input type="text" size="55" name="watch" title="���ݎ����ł��B" style="text-align:center" readonly><br>'+
+                    'Time: <input type="text" size="55" name="watch" title="現在時刻です。" style="text-align:center" readonly><br>'+
                     '<span id="afr"><iframe name="fr" width="650" height="250"></iframe></span><p>'+
                     '<table border="0" cellspacing="0" cellpadding="0"><tr><td>'+
-                    'URL: <textarea cols="60" rows="4" wrap="off" name="urled" title="�ڕW��URL����͂��Ă��������B���s�ŕ����w��ł��܂��B" style="ime-mode:inactive;"></textarea> '+
+                    'URL: <textarea cols="60" rows="4" wrap="off" name="urled" title="目標のURLを入力してください。改行で複数指定できます。" style="ime-mode:inactive;"></textarea> '+
                     '</td><td valign="bottom"><table border="0" cellspacing="0"><tr><td align="center">'+
-                    '<input type="button" value="�J��" onclick="one();" title="���͂��ꂽURL���J���܂��B"><br>'+
+                    '<input type="button" value="開く" onclick="one();" title="入力されたURLを開きます。"><br>'+
                     '</td></tr><tr><td>'+
-                    '<input type="button" value="����" onclick="document.x.urled.value=\'\';" title="���͂��ꂽ���e���������܂��B"><br>'+
+                    '<input type="button" value="消去" onclick="document.x.urled.value=\'\';" title="入力された内容を消去します。"><br>'+
                     '</td></tr></table></td></tr></table>'+
                     '<hr width="550">'+
-                    'Window:<input type="checkbox" name="wdm" title="�`�F�b�N�ŃE�B���h�E���J���ĖK�₵�܂��B"> '+
-                    '�C�吔: <input type="text" size="5" name="mcount" value="4" title="�\�����鏬���̐�����͂��Ă��������B" style="ime-mode:inactive;">�@'+
-                    '�K��Ԋu: <input type="text" size="7" name="ival" value="1000" title="�K�₷��Ԋu����͂��Ă��������B" style="ime-mode:inactive;">ms�@'+
-                    '�K���: <input type="text" size="7" name="rem" value="0" title="�K�₷��񐔂���͂��Ă��������B0�Ȃ疳���ł��B" style="ime-mode:inactive;"><br>'+
-                    'W:<input type="checkbox" name="tw1" title="�`�F�b�N�Ń^�C�}�[�N�����ɃE�B���h�E���J���ĖK�₵�܂��B">�@'+
-                    'Type: 1:<input type="radio" name="tm1" value="1" title="�^�C�}�[�N�����Ɉ�ʓI�ȓc��C�����ŖK�₵�܂��B" checked> '+
-                    '2:<input type="radio" name="tm1" value="2" title="�^�C�}�[�N������SpamKiller�����ŖK�₵�܂��B"> '+
-                    '3:<input type="radio" name="tm1" value="3" title="�^�C�}�[�N������Attacked�����ŖK�₵�܂��B">�@');
+                    'Window:<input type="checkbox" name="wdm" title="チェックでウィンドウを開いて訪問します。"> '+
+                    '砲門数: <input type="text" size="5" name="mcount" value="4" title="表示する小窓の数を入力してください。" style="ime-mode:inactive;">　'+
+                    '訪問間隔: <input type="text" size="7" name="ival" value="1000" title="訪問する間隔を入力してください。" style="ime-mode:inactive;">ms　'+
+                    '訪問回数: <input type="text" size="7" name="rem" value="0" title="訪問する回数を入力してください。0なら無限です。" style="ime-mode:inactive;"><br>'+
+                    'W:<input type="checkbox" name="tw1" title="チェックでタイマー起動時にウィンドウを開いて訪問します。">　'+
+                    'Type: 1:<input type="radio" name="tm1" value="1" title="タイマー起動時に一般的な田代砲方式で訪問します。" checked> '+
+                    '2:<input type="radio" name="tm1" value="2" title="タイマー起動時にSpamKiller方式で訪問します。"> '+
+                    '3:<input type="radio" name="tm1" value="3" title="タイマー起動時にAttacked方式で訪問します。">　');
                 if(navigator.appName.indexOf('Opera') > -1){
-                    document.write('�J�n: [<input size="2" type="text" name="t1" value="" maxlength="2" title="�J�n���������2���œ��͂��Ă��������B">��'+
-                        '<input size="2" type="text" name="t2" value="" maxlength="2" title="�J�n���������2���œ��͂��Ă��������B">��'+
-                        '<input size="2" type="text" name="t3" value="" maxlength="2" title="�J�n���������2���œ��͂��Ă��������B">��]�@'+
-                        '��~: [<input size="2" type="text" name="t4" value="" maxlength="2" title="��~���������2���œ��͂��Ă��������B">��'+
-                        '<input size="2" type="text" name="t5" value="" maxlength="2" title="��~���������2���œ��͂��Ă��������B">��'+
-                        '<input size="2" type="text" name="t6" value="" maxlength="2" title="��~���������2���œ��͂��Ă��������B">��]');
+                    document.write('開始: [<input size="2" type="text" name="t1" value="" maxlength="2" title="開始する日時を2桁で入力してください。">日'+
+                        '<input size="2" type="text" name="t2" value="" maxlength="2" title="開始する日時を2桁で入力してください。">時'+
+                        '<input size="2" type="text" name="t3" value="" maxlength="2" title="開始する日時を2桁で入力してください。">分]　'+
+                        '停止: [<input size="2" type="text" name="t4" value="" maxlength="2" title="停止する日時を2桁で入力してください。">日'+
+                        '<input size="2" type="text" name="t5" value="" maxlength="2" title="停止する日時を2桁で入力してください。">時'+
+                        '<input size="2" type="text" name="t6" value="" maxlength="2" title="停止する日時を2桁で入力してください。">分]');
                 }
                 else {
-                    document.write('�J�n: [<input size="1" type="text" name="t1" value="" maxlength="2" title="�J�n���������2���œ��͂��Ă��������B" style="ime-mode:inactive;">��'+
-                        '<input size="1" type="text" name="t2" value="" maxlength="2" title="�J�n���������2���œ��͂��Ă��������B" style="ime-mode:inactive;">��'+
-                        '<input size="1" type="text" name="t3" value="" maxlength="2" title="�J�n���������2���œ��͂��Ă��������B" style="ime-mode:inactive;">��]�@'+
-                        '��~: [<input size="1" type="text" name="t4" value="" maxlength="2" title="��~���������2���œ��͂��Ă��������B" style="ime-mode:inactive;">��'+
-                        '<input size="1" type="text" name="t5" value="" maxlength="2" title="��~���������2���œ��͂��Ă��������B" style="ime-mode:inactive;">��'+
-                        '<input size="1" type="text" name="t6" value="" maxlength="2" title="��~���������2���œ��͂��Ă��������B" style="ime-mode:inactive;">��]');
+                    document.write('開始: [<input size="1" type="text" name="t1" value="" maxlength="2" title="開始する日時を2桁で入力してください。" style="ime-mode:inactive;">日'+
+                        '<input size="1" type="text" name="t2" value="" maxlength="2" title="開始する日時を2桁で入力してください。" style="ime-mode:inactive;">時'+
+                        '<input size="1" type="text" name="t3" value="" maxlength="2" title="開始する日時を2桁で入力してください。" style="ime-mode:inactive;">分]　'+
+                        '停止: [<input size="1" type="text" name="t4" value="" maxlength="2" title="停止する日時を2桁で入力してください。" style="ime-mode:inactive;">日'+
+                        '<input size="1" type="text" name="t5" value="" maxlength="2" title="停止する日時を2桁で入力してください。" style="ime-mode:inactive;">時'+
+                        '<input size="1" type="text" name="t6" value="" maxlength="2" title="停止する日時を2桁で入力してください。" style="ime-mode:inactive;">分]');
                 }
                 document.write('<br>'+
-                    'W:<input type="checkbox" name="tw2" title="�`�F�b�N�Ń^�C�}�[�N�����ɃE�B���h�E���J���ĖK�₵�܂��B">�@'+
-                    'Type: 1:<input type="radio" name="tm2" value="1" title="�^�C�}�[�N�����Ɉ�ʓI�ȓc��C�����ŖK�₵�܂��B" checked> '+
-                    '2:<input type="radio" name="tm2" value="2" title="�^�C�}�[�N������SpamKiller�����ŖK�₵�܂��B"> '+
-                    '3:<input type="radio" name="tm2" value="3" title="�^�C�}�[�N������Attacked�����ŖK�₵�܂��B">�@');
+                    'W:<input type="checkbox" name="tw2" title="チェックでタイマー起動時にウィンドウを開いて訪問します。">　'+
+                    'Type: 1:<input type="radio" name="tm2" value="1" title="タイマー起動時に一般的な田代砲方式で訪問します。" checked> '+
+                    '2:<input type="radio" name="tm2" value="2" title="タイマー起動時にSpamKiller方式で訪問します。"> '+
+                    '3:<input type="radio" name="tm2" value="3" title="タイマー起動時にAttacked方式で訪問します。">　');
 if(navigator.appName.indexOf('Opera') > -1){
-	document.write('�J�n: [<input size="2" type="text" name="t7" value="" maxlength="2" title="�J�n���������2���œ��͂��Ă��������B">��'+
-	'<input size="2" type="text" name="t8" value="" maxlength="2" title="�J�n���������2���œ��͂��Ă��������B">��'+
-	'<input size="2" type="text" name="t9" value="" maxlength="2" title="�J�n���������2���œ��͂��Ă��������B">��]�@'+
-	'��~: [<input size="2" type="text" name="t10" value="" maxlength="2" title="��~���������2���œ��͂��Ă��������B">��'+
-	'<input size="2" type="text" name="t11" value="" maxlength="2" title="��~���������2���œ��͂��Ă��������B">��'+
-	'<input size="2" type="text" name="t12" value="" maxlength="2" title="��~���������2���œ��͂��Ă��������B">��]');
+	document.write('開始: [<input size="2" type="text" name="t7" value="" maxlength="2" title="開始する日時を2桁で入力してください。">日'+
+	'<input size="2" type="text" name="t8" value="" maxlength="2" title="開始する日時を2桁で入力してください。">時'+
+	'<input size="2" type="text" name="t9" value="" maxlength="2" title="開始する日時を2桁で入力してください。">分]　'+
+	'停止: [<input size="2" type="text" name="t10" value="" maxlength="2" title="停止する日時を2桁で入力してください。">日'+
+	'<input size="2" type="text" name="t11" value="" maxlength="2" title="停止する日時を2桁で入力してください。">時'+
+	'<input size="2" type="text" name="t12" value="" maxlength="2" title="停止する日時を2桁で入力してください。">分]');
 }else{
-	document.write('�J�n: [<input size="1" type="text" name="t7" value="" maxlength="2" title="�J�n���������2���œ��͂��Ă��������B" style="ime-mode:inactive;">��'+
-	'<input size="1" type="text" name="t8" value="" maxlength="2" title="�J�n���������2���œ��͂��Ă��������B" style="ime-mode:inactive;">��'+
-	'<input size="1" type="text" name="t9" value="" maxlength="2" title="�J�n���������2���œ��͂��Ă��������B" style="ime-mode:inactive;">��]�@'+
-	'��~: [<input size="1" type="text" name="t10" value="" maxlength="2" title="��~���������2���œ��͂��Ă��������B" style="ime-mode:inactive;">��'+
-	'<input size="1" type="text" name="t11" value="" maxlength="2" title="��~���������2���œ��͂��Ă��������B" style="ime-mode:inactive;">��'+
-	'<input size="1" type="text" name="t12" value="" maxlength="2" title="��~���������2���œ��͂��Ă��������B" style="ime-mode:inactive;">��]');
+	document.write('開始: [<input size="1" type="text" name="t7" value="" maxlength="2" title="開始する日時を2桁で入力してください。" style="ime-mode:inactive;">日'+
+	'<input size="1" type="text" name="t8" value="" maxlength="2" title="開始する日時を2桁で入力してください。" style="ime-mode:inactive;">時'+
+	'<input size="1" type="text" name="t9" value="" maxlength="2" title="開始する日時を2桁で入力してください。" style="ime-mode:inactive;">分]　'+
+	'停止: [<input size="1" type="text" name="t10" value="" maxlength="2" title="停止する日時を2桁で入力してください。" style="ime-mode:inactive;">日'+
+	'<input size="1" type="text" name="t11" value="" maxlength="2" title="停止する日時を2桁で入力してください。" style="ime-mode:inactive;">時'+
+	'<input size="1" type="text" name="t12" value="" maxlength="2" title="停止する日時を2桁で入力してください。" style="ime-mode:inactive;">分]');
 }
-document.write('<br>Wildcard:<input type="checkbox" name="wcc" title="�`�F�b�N�Ń��C���h�J�[�h���g�p���܂��B">�@'+
+document.write('<br>Wildcard:<input type="checkbox" name="wcc" title="チェックでワイルドカードを使用します。">　'+
 '<span class="wi">*=$or!, $=&lt;or&gt;, @=&lt;or!, +=&gt;or!, &lt;=a-z, &gt;=A-Z, !=0-9, (=0-f, )=0-F, [0-1]=0-1, \\=bypass</span>'+
 '<hr width="550">'+
-'<input type="button" value="�K���m�F" onclick="display();" title="�ڕW��URL���t���[���ɕ\�����܂��B"> '+
-'<input type="button" value="�J�n 1" onclick="stt(1);" title="��ʓI�ȓc��C�����ŖK�₵�܂��B""> '+
-'<input type="button" value="�J�n 2" onclick="stt(2);" title="SpamKiller�����ŖK�₵�܂��B"> '+
-'<input type="button" value="�J�n 3" onclick="stt(3);" title="Attacked�����ŖK�₵�܂��B"> '+
-'<input type="button" value="�K���~" onclick="stop(1,1);" title="�K����~���܂��B"> '+
-'<input type="button" value="�N���A" onclick="location.reload(true);" title="���͂��ꂽ���Ȃǂ����Z�b�g���܂��B"><br>'+
+'<input type="button" value="訪問先確認" onclick="display();" title="目標のURLをフレームに表示します。"> '+
+'<input type="button" value="開始 1" onclick="stt(1);" title="一般的な田代砲方式で訪問します。""> '+
+'<input type="button" value="開始 2" onclick="stt(2);" title="SpamKiller方式で訪問します。"> '+
+'<input type="button" value="開始 3" onclick="stt(3);" title="Attacked方式で訪問します。"> '+
+'<input type="button" value="訪問停止" onclick="stop(1,1);" title="訪問を停止します。"> '+
+'<input type="button" value="クリア" onclick="location.reload(true);" title="入力された情報などをリセットします。"><br>'+
 '<table border="0"><tr><td>'+
-'<input type="button" name="b1" value="����" title="�ŏI����̈��S���u�ł��B�����Ɖ������܂��B" onclick="und(1);"> '+
-'<input type="button" name="b2" value="����" title="�ŏI����̈��S���u�ł��B�����Ɖ������܂��B" onclick="und(2);"> '+
-'<input type="button" name="b3" value="����" title="�ŏI����̈��S���u�ł��B�����Ɖ������܂��B" onclick="und(3);"> '+
-'<input type="button" name="fb" value="- �ŏI����N�� -" onclick="stt(7);" title="��x��6�̕��@�ōX�V���܂��B" disabled>'+
+'<input type="button" name="b1" value="解除" title="最終兵器の安全装置です。押すと解除します。" onclick="und(1);"> '+
+'<input type="button" name="b2" value="解除" title="最終兵器の安全装置です。押すと解除します。" onclick="und(2);"> '+
+'<input type="button" name="b3" value="解除" title="最終兵器の安全装置です。押すと解除します。" onclick="und(3);"> '+
+'<input type="button" name="fb" value="- 最終兵器起動 -" onclick="stt(7);" title="一度に6つの方法で更新します。" disabled>'+
 '</td></tr></table>');
 if(navigator.appName.indexOf('Opera') > -1){
-document.write('<input type="text" size="55" name="sta" value="- Standby -" title="�e���񂪂����ɕ\������܂��B" style="text-align:center;" readonly>');
+document.write('<input type="text" size="55" name="sta" value="- Standby -" title="各種情報がここに表示されます。" style="text-align:center;" readonly>');
 }else{
-document.write('<input type="text" size="80" name="sta" value="- Standby -" title="�e���񂪂����ɕ\������܂��B" style="text-align:center;" readonly>');
+document.write('<input type="text" size="80" name="sta" value="- Standby -" title="各種情報がここに表示されます。" style="text-align:center;" readonly>');
 }
 document.write('</form>');
 
 /* --------------------------------------------------
-	�t�H�[�������܂�
+	フォームここまで
 --------------------------------------------------- */
 
-// boon Script Version 3700��4
+// boon Script Version 3700β4
 
 /*
-WindowsXP SP2  IE6 Firefox1.0.6 Opera8.01 �œ�����m�F���Ă��܂��B
-Mozilla ActiveX Control �ł͂��܂������Ȃ��悤�ł��B
-(Opera�̔��ʕ��@��ύX���܂����BIE�ɋU�����Ă������܂��B)
+WindowsXP SP2  IE6 Firefox1.0.6 Opera8.01 で動作を確認しています。
+Mozilla ActiveX Control ではうまく動かないようです。
+(Operaの判別方法を変更しました。IEに偽装しても動きます。)
 */
 
 var i,i2,i3,i4,iwc,tt,rm,ac,ctf,wch;
@@ -120,7 +120,7 @@ var pp=0,qq=0;
 var wic=0;
 var tln1=0,tln2=0,tln3=0,tln4=0,tln5=0,tln6=0;
 var ack3=0,ack6=0;
-// ���C���h�J�[�h�ݒ�
+// ワイルドカード設定
 var randomCards0="*,$,@,+,<,>,!,(,)".split(",");
 var string0="0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z".split(",");
 var string1=new Array();
@@ -151,7 +151,7 @@ for(i=10;i<16;++i){
 for(i=10;i<36;++i){
 	string1[i]=string0[i+26];
 }
-// �����܂�
+// ここまで
 
 function time(){
 	setTimeout("time()",1000);
@@ -166,7 +166,7 @@ function time(){
 	if(hour<10){hour="0"+hour}
 	if(minute<10){minute="0"+minute}
 	if(second<10){second="0"+second}
-	document.x.watch.value="���ݎ���: "+(month)+"��"+(dayn)+"�� "+(hour)+"��"+(minute)+"��"+(second)+"�b�ł��B ["+(day)+""+(hour)+""+(minute)+"]";
+	document.x.watch.value="現在時刻: "+(month)+"月"+(dayn)+"日 "+(hour)+"時"+(minute)+"分"+(second)+"秒です。 ["+(day)+""+(hour)+""+(minute)+"]";
 	if(document.x.t1.value==day && document.x.t2.value==hour && document.x.t3.value==minute && 0==second){tsp(1);}
 	if(document.x.t4.value==day && document.x.t5.value==hour && document.x.t6.value==minute && 0==second){stop(1,1);}
 	if(document.x.t7.value==day && document.x.t8.value==hour && document.x.t9.value==minute && 0==second){tsp(2);}
@@ -184,9 +184,9 @@ function timeset(){
 	//document.x.t11.value=(hour);
 }
 
-// rf��1�ł�2�ł��ǂ�����rt�����ł悩�����̂����ǁA
-// �^�C�}�[���������Ɏ��s���ꂽ�ꍇ��
-// Firefox�ł��܂������Ȃ��݂����Ȃ̂ŁA2�ɕ�����B
+// rfが1でも2でもどっちもrtだけでよかったのだけど、
+// タイマーが同時刻に実行された場合に
+// Firefoxでうまく動かないみたいなので、2つに分ける。
 function tsp(rf){
 	ctf=1;
 	if(rf==1){
@@ -202,7 +202,7 @@ function tsp(rf){
 			rt1=rt1+3
 			stt(rt1);
 		}else{
-			document.x.sta.value="�K��^�C�v���w�肵�Ă��������B";	// �\������邱�Ƃ͂܂������B
+			document.x.sta.value="訪問タイプを指定してください。";	// 表示されることはまず無い。
 		}
 	}
 	if(rf==2){
@@ -218,7 +218,7 @@ function tsp(rf){
 			rt2=rt2+3
 			stt(rt2);
 		}else{
-			document.x.sta.value="�K��^�C�v���w�肵�Ă��������B";
+			document.x.sta.value="訪問タイプを指定してください。";
 		}
 	}
 }
@@ -234,13 +234,13 @@ function stt(qq){
 	if(document.x.mcount.value<=0||document.x.mcount.value==""){document.x.mcount.value="1"}
 	if(document.x.ival.value<=0||document.x.ival.value==""){document.x.ival.value="1"}
 	if(document.x.rem.value<=0||document.x.rem.value==""){document.x.rem.value="0"}
-	if(qq!=7 && ctf!=1){				// �ŏI����܂��̓^�C�}�[����̋N����wdm�̃`�F�b�N�𖳎�
+	if(qq!=7 && ctf!=1){				// 最終兵器またはタイマーからの起動はwdmのチェックを無視
 		if(document.x.wdm.checked){qq=qq+3;}
 	}
 	clf();
 	set();
 	if(window.opera){
-		setTimeout("ks('"+(qq)+"')",100);	// Opera�p�����B���s�����؂����Ȃ���clf�̏��������Ԃɍ���Ȃ��B
+		setTimeout("ks('"+(qq)+"')",100);	// Opera用処理。実行を延滞させないとclfの初期化が間に合わない。
 	}else{
 		ks(qq);
 	}
@@ -249,7 +249,7 @@ function stt(qq){
 function cns(){
 	if(
 		document.x.mcount.value.match(/\D/)||
-		isNaN(document.x.ival.value)||		// �K��Ԋu�ɏ����_��ݒ�ł���悤�ɂ���B100.9�Ƃ�1e+3�Ƃ�����
+		isNaN(document.x.ival.value)||		// 訪問間隔に小数点を設定できるようにする。100.9とか1e+3とかもｗ
 		document.x.rem.value.match(/\D/)||
 		document.x.t1.value.match(/\D/)||
 		document.x.t2.value.match(/\D/)||
@@ -264,7 +264,7 @@ function cns(){
 		document.x.t11.value.match(/\D/)||
 		document.x.t12.value.match(/\D/)
 	){
-		document.x.sta.value="- ���p�����Őݒ肵�Ă������� -";
+		document.x.sta.value="- 半角数字で設定してください -";
 		return false;
 	}else{
 		return true;
@@ -297,7 +297,7 @@ function ks(qq){
 			kr1();
 		}else if(pp==2||pp==3){
 			fr.document.open();
-			if(mc==1){		// pp==2�m�� kr2�̑O�ɂ����ŕ`�悷��B
+			if(mc==1){		// pp==2確定 kr2の前にここで描画する。
 				fr.document.write('<html><head><frameset><frame name="nfr0" src="'+(convurl(1))+'"></frameset></head>'+
 				'<body onLoad="timeid0=setInterval(\'nfr0.location.href=top.convurl(1);top.stasys();\','+(tt)+');top.stasys();"></body></html>');
 			}else{
@@ -332,13 +332,13 @@ function ks(qq){
 	}else{}
 }
 
-// verifyurl��convurl�͂��[�ڂ񎁂�spread boon��(�����)�������Ă��܂��B
-// �������A�悭����Ȏd�g�݂��v�����ȂƊ��S�B
+// verifyurlとconvurlはしーぼん氏のspread boonを(勝手に)改造しています。
+// しかし、よくこんな仕組みを思いつくなと感心。
 function verifyurl(){
 	tl=new Array;
 	tlt=document.x.urled.value.split(/\r\n|\r|\n/);
 	for(tlc=0;tlc<tlt.length;tlc++){
-		if(tlt[tlc]=="" || tlt[tlc].match(/^\s|^\r/)){}	// �����K���������肷��B
+		if(tlt[tlc]=="" || tlt[tlc].match(/^\s|^\r/)){}	// 正直適当だったりする。
 		else{
 			tl.push(tlt[tlc]);
 		}
@@ -346,19 +346,19 @@ function verifyurl(){
 	if(tl.length > 0){
 		return true;
 	}else{
-		document.x.sta.value="- URL����͂��Ă������� -";
+		document.x.sta.value="- URLを入力してください -";
 		return false;
 	}
 }
 
-// �ŏI����p��tln�𕪂���B
-// �����Ȃ��ƕ���URL��K�⎞��fkr2�œ����A�h���X�����\������Ƃ����s����������B
+// 最終兵器用にtlnを分ける。
+// 分けないと複数URLを訪問時にfkr2で同じアドレスだけ表示するという不具合があった。
 function convurl(pss){
-	if(pss==0){				// pss==0 �K���m�F�p
+	if(pss==0){				// pss==0 訪問先確認用
 		if(tln1 >= tl.length){
 			tln1=0;
 		}
-		if(document.x.wcc.checked){	// ���C���h�J�[�h�̎g�p�̃`�F�b�N�������ɔ��f��������
+		if(document.x.wcc.checked){	// ワイルドカードの使用のチェックをすぐに反映させられる
 			urlconv1=randomString1(tl[tln1]);
 		}else{
 			urlconv1=tl[tln1];
@@ -431,7 +431,7 @@ function convurl(pss){
 		}
 		++tln6;
 		return urlconv6;
-	}else{					// urlconv(1)��1��Y��Ă��ꉞ�����悤�ɂ���B�X�N���v�g�g���p�⏕�B
+	}else{					// urlconv(1)の1を忘れても一応動くようにする。スクリプト拡張用補助。
 		if(tln1 >= tl.length){
 			tln1=0;
 		}
@@ -445,8 +445,8 @@ function convurl(pss){
 	}
 }
 
-// ���C���h�J�[�h����
-// IMG�C1.0��(�����)�����B
+// ワイルドカード部分
+// IMG砲1.0を(勝手に)改造。
 function randomString1(original){
 	var char1="",original2="";
 	var original1=original.replace(/\[(\d+)-(\d+)\]/g,convurlrandom);
@@ -456,7 +456,7 @@ function randomString1(original){
 		if(char1=="\\"){
 			ctmp=original1.charAt(iwc+1);
 			original2 +=ctmp;
-			++iwc;		//���̕����𖳎�
+			++iwc;		//次の文字を無視
 		}else{
 			if(char1==randomCards0[0]) char1=string0[random1(62)];
 			if(char1==randomCards0[1]) char1=alphabet0[random1(52)];
@@ -503,7 +503,7 @@ function kr1(){
 			}
 		}
 		fr.document.close();
-		document.x.sta.value="- Interval:["+(tt/1000)+"s] Count:["+(++wic)+"�~"+(mc)+"f] Accessed:["+(ac)+"] -";
+		document.x.sta.value="- Interval:["+(tt/1000)+"s] Count:["+(++wic)+"×"+(mc)+"f] Accessed:["+(ac)+"] -";
 		if(rm!=0 && ac>=rm){stop(1,1);}
 	}
 }
@@ -540,7 +540,7 @@ function kr4(){
 				++ac;
 			}
 		}
-		document.x.sta.value="- Interval:["+(tt/1000)+"s] Count:["+(++wic)+"�~"+(mc)+"w] Accessed:["+(ac)+"] -";
+		document.x.sta.value="- Interval:["+(tt/1000)+"s] Count:["+(++wic)+"×"+(mc)+"w] Accessed:["+(ac)+"] -";
 		if(rm!=0 && ac>=rm){stop(1,1);}
 	}
 }
@@ -599,9 +599,9 @@ function und(str){
 	}
 }
 
-// - �ŏI���� -
-// ���������t���[�����E�B���h�E���g����񂾂��痼���ŁA���Đl�����邩������Ȃ��̂ŁB
-// ���ʂ͕ۏ�ł��܂���B
+// - 最終兵器 -
+// せっかくフレームもウィンドウも使えるんだから両方で、って人がいるかもしれないので。
+// 効果は保障できません。
 function ffd(){
 	fr.document.open();
 		fr.document.write("<frameset cols='33%,34%,33%'><frame name='k1f'><frame name='k2f'><frame name='k3f'></frameset>");
@@ -791,7 +791,7 @@ function stop(ts,sp){
 
 function clf(){
 	if(navigator.appName.indexOf('Microsoft') > -1){
-		afr.innerHTML=document.getElementById("afr").innerHTML;		// �]�v�ɉ����o���Ȃ��悤�ɂ���B���v���΂��Ȃ苭���ȕ��@�B
+		afr.innerHTML=document.getElementById("afr").innerHTML;		// 余計に音を出さないようにする。今思えばかなり強引な方法。
 	}else{
 		fr.location.href="about:blank";
 	}
@@ -800,7 +800,7 @@ function clf(){
 function tsw(){
 	clf();
 	if(window.opera){
-		setTimeout("tswsub()",100);	// Opera�p�����B
+		setTimeout("tswsub()",100);	// Opera用処理。
 	}else{
 		tswsub();
 	}
@@ -833,128 +833,128 @@ time();
 timeset();
 
 </script>
-<!-- �ȉ��A�����Ȃ� -->
+<!-- 以下、説明など -->
 <p>
 <span class="wi">
-<strong>- �g���� -</strong><p>
-<b>�J��</b><br>
-���͂��ꂽURL��ʃE�B���h�E�ŊJ���܂��B<br>
-�������͂���Ă���ꍇ�́A���͂��ꂽURL���ׂĂ��J���܂��B<p>
-<b>����</b><br>
-URL���ɓ��͂��ꂽ�f�[�^���������܂��B<p>
+<strong>- 使い方 -</strong><p>
+<b>開く</b><br>
+入力されたURLを別ウィンドウで開きます。<br>
+複数入力されている場合は、入力されたURLすべてを開きます。<p>
+<b>消去</b><br>
+URL欄に入力されたデータを消去します。<p>
 <b>Window</b><br>
-�`�F�b�N������ƁA�t���[����`�悷��̂ł͂Ȃ��A�E�B���h�E���J���܂��B<br>
-Window���[�h���g�p����Ƃ��́A�u���E�U�̃|�b�v�A�b�v�u���b�N���������Ă��������B<p>
-<b>�K���</b><br>
-�X�V���鐔����͂��܂��B<br>
-200�Ɠ��͂���΁A200��X�V���Ē�~���܂��B<br>
-�ʏ�K��̏ꍇ�͏����̐��Ōv�Z����̂ŁA4�C��~50��X�V=200�ƂȂ�A��~���܂��B<br>
-�K��񐔂�0�̏ꍇ�́A�����ɍX�V���܂��B<p>
-<b>�^�C�}�[</b><br>
-��������͂���ƁA�w�肵�����ԂɖK����J�n���A��~���܂��B<br>
-�e�{�b�N�X�ɓ��͂���l��2���Ȃ̂ŁA3���ߌ�8��5���ɊJ�n�������Ƃ��́A03 20 05 �Ɠ��͂��Ă��������B<br>
-�ׂɂ���W�̃`�F�b�N�{�b�N�X�ƁA���W�I�{�^���̐����ł��B<br>
-W�Ƀ`�F�b�N������ƁA�E�B���h�E���J���čX�V���܂��B<br>
-���̃`�F�b�N�́A���Window�̃`�F�b�N�����D�悳��܂��B<br>
-Type�́A�K����@���w�肵�܂��B���ꂼ��̖K����@�ɂ��ẮA���̕��ɏ����Ă���܂��B<br>
-�����ACPU�̕��ׂ��ُ�ɍ����Ƃ��̓^�C�}�[�������Ȃ��Ƃ�������܂��B<br>
-�ݒ肵���C�吔�ȂǂŐ���ɒ�~���邩���m�F���āA���g�����������B<p>
-<b>���C���h�J�[�h(Wildcard)</b><br>
-���C���h�J�[�h�́A���C���h�J�[�h�̕���(*��!�Ȃ�)��K�⎞�Ƀ����_���ȕ����ɒu��������@�\�ł��B<br>
-���̋@�\�́AIMG�C1.0��spread boon�̋@�\�ɁA�����̑O��\������ƃo�C�p�X���ł���@�\��ǉ��������̂ł��B(�ꕔ����)<br>
-�g�p����ۂ́AWildcard�Ƀ`�F�b�N�����Ă��������B<br><br>
-�e���C���h�J�[�h�ƑΉ����镶���͎��̂Ƃ���ł��B<br>
-* = $or!�@�@$ = &lt;or&gt;�@�@@ = &lt;or!�@�@+ = &gt;or!�@�@&lt; = a-z�@�@&gt; = A-Z�@�@! = 0-9�@�@( = 0-f�@�@) = 0-F�@[����1-����2]=����1-����2<br><br>
-����ɂ���āA.cgi?name=***�Ə������ƂŁA���O��ς��ăf�[�^�������玟�ւƑ�������A(method��GET�ł��ǂ��̂Ȃ�)<br>
-!!!!!.jpg�ȂǂƏ������ƂŁA�����̃C���[�W�t�@�C���ɃA�N�Z�X�ł����肵�܂��B<br><br>
-[����1-����2]�́A����1���琔��2�͈̔͂̐����ɒu�������܂��B<br>
-[0-999]�Ə����΁A207��55�ɂȂ����肵�܂����A[500-700]��������A500����700�܂ł̐������I�΂�܂��B<br>
-!�ƈႤ�Ƃ���́A�͈͂��w��ł���Ƃ���ƁA!!!�Ȃ�003�ɂȂǂɂȂ�܂����A[3-5]�Ȃ�A3�B�ƁA0�����܂���B<br>
-[0-255].[0-255].[0-255].[0-255]�Ə����΁AIP�A�h���X�������_���Ɏw��ł��܂��B<br><br>
-�Ȃ��A���C���h�J�[�h�̕����𕁒ʂɎg�������ꍇ�́A���C���h�J�[�h�̕����̑O��\�����Ă��������B(��:\*)<br>
-�������A[����1-����2]�̏ꍇ�́A"["����"]"�̒���\�����Ă��������B(��:[\0-99])<br><br>
-<!-- \[0-99]�Ńo�C�p�X�������������̂ł����A�͕s���łǂ��ɂ��Ȃ�܂���ł����B -->
-�Q�l:������f�[�^<br>
+チェックを入れると、フレームを描画するのではなく、ウィンドウを開きます。<br>
+Windowモードを使用するときは、ブラウザのポップアップブロックを解除してください。<p>
+<b>訪問回数</b><br>
+更新する数を入力します。<br>
+200と入力すれば、200回更新して停止します。<br>
+通常訪問の場合は小窓の数で計算するので、4砲門×50回更新=200となり、停止します。<br>
+訪問回数が0の場合は、無限に更新します。<p>
+<b>タイマー</b><br>
+日時を入力すると、指定した時間に訪問を開始し、停止します。<br>
+各ボックスに入力する値は2桁なので、3日午後8時5分に開始したいときは、03 20 05 と入力してください。<br>
+隣にあるWのチェックボックスと、ラジオボタンの説明です。<br>
+Wにチェックを入れると、ウィンドウを開いて更新します。<br>
+このチェックは、上のWindowのチェックよりも優先されます。<br>
+Typeは、訪問方法を指定します。それぞれの訪問方法については、下の方に書いてあります。<br>
+ただ、CPUの負荷が異常に高いときはタイマーが働かないときがあります。<br>
+設定した砲門数などで正常に停止するかを確認して、お使いください。<p>
+<b>ワイルドカード(Wildcard)</b><br>
+ワイルドカードは、ワイルドカードの文字(*や!など)を訪問時にランダムな文字に置き換える機能です。<br>
+この機能は、IMG砲1.0とspread boonの機能に、文字の前に\をつけるとバイパスができる機能を追加したものです。(一部除く)<br>
+使用する際は、Wildcardにチェックを入れてください。<br><br>
+各ワイルドカードと対応する文字は次のとおりです。<br>
+* = $or!　　$ = &lt;or&gt;　　@ = &lt;or!　　+ = &gt;or!　　&lt; = a-z　　&gt; = A-Z　　! = 0-9　　( = 0-f　　) = 0-F　[数字1-数字2]=数字1-数字2<br><br>
+これによって、.cgi?name=***と書くことで、名前を変えてデータを次から次へと送ったり、(methodがGETでも良いのなら)<br>
+!!!!!.jpgなどと書くことで、多くのイメージファイルにアクセスできたりします。<br><br>
+[数字1-数字2]は、数字1から数字2の範囲の数字に置き換えます。<br>
+[0-999]と書けば、207や55になったりしますし、[500-700]だったら、500から700までの数字が選ばれます。<br>
+!と違うところは、範囲が指定できるところと、!!!なら003になどになりますが、[3-5]なら、3。と、0がつきません。<br>
+[0-255].[0-255].[0-255].[0-255]と書けば、IPアドレスをランダムに指定できます。<br><br>
+なお、ワイルドカードの文字を普通に使いたい場合は、ワイルドカードの文字の前に\をつけてください。(例:\*)<br>
+ただし、[数字1-数字2]の場合は、"["から"]"の中に\を入れてください。(例:[\0-99])<br><br>
+<!-- \[0-99]でバイパスさせたかったのですが、力不足でどうにもなりませんでした。 -->
+参考:送られるデータ<br>
 <table cellspacing="1" bgcolor="black">
 <tr>
-<td align="center" bgcolor="#bbbbbb"><span class="wi">����</span></td><td align="center" bgcolor="#bbbbbb"><span class="wi">����</td>
+<td align="center" bgcolor="#bbbbbb"><span class="wi">書式</span></td><td align="center" bgcolor="#bbbbbb"><span class="wi">結果</td>
 </tr>
 <tr>
-<td bgcolor="#bbbbbb"><span class="wi">***</span></td><td bgcolor="#bbbbbb"><span class="wi">unM pW9 �Ȃ�</span></td>
+<td bgcolor="#bbbbbb"><span class="wi">***</span></td><td bgcolor="#bbbbbb"><span class="wi">unM pW9 など</span></td>
 </tr>
 <tr>
 <td bgcolor="#bbbbbb"><span class="wi">\*</span></td><td bgcolor="#bbbbbb"><span class="wi">*</span></td>
 </tr>
 <tr>
-<td bgcolor="#bbbbbb"><span class="wi">\**</span></td><td bgcolor="#bbbbbb"><span class="wi">*d *M �Ȃ�</span></td>
+<td bgcolor="#bbbbbb"><span class="wi">\**</span></td><td bgcolor="#bbbbbb"><span class="wi">*d *M など</span></td>
 </tr>
 <tr>
-<td bgcolor="#bbbbbb"><span class="wi">\\*</span></td><td bgcolor="#bbbbbb"><span class="wi">\A \2 �Ȃ�</span></td>
+<td bgcolor="#bbbbbb"><span class="wi">\\*</span></td><td bgcolor="#bbbbbb"><span class="wi">\A \2 など</span></td>
 </tr>
 <tr>
 <td bgcolor="#bbbbbb"><span class="wi">\\\*</span></td><td bgcolor="#bbbbbb"><span class="wi">\*</span></td>
 </tr>
 </table>
 <br>
-\�������Ƃ��̋����͂킩��ɂ����̂ł����A�X�N���v�g������΂킩��Ƃ���A<br>
-�w�擪���猟�����Ă����āA\���������玟�̕����͌������珜�O���āA�����𑱍s����x<br>
-�ł��̂ŁA\\*�Ɠ��͂����Ƃ���2�Ԗڂ�\�́A1�Ԗڂ�\�ŏ��O����Ă��܂��̂ŁA*���u�����������킯�ł��B<br>
-\\\*�Ɠ��͂����ꍇ�́A1�Ԗڂ�\��2�Ԗڂ�\�����O����A3�Ԗڂ�\��*�����O����̂ŁA\*�ƂȂ�킯�ł��B<br><br>
-�Ƃ肠�����A�킩��ɂ��������ł������A���낢��Ǝg���Ă݂Ă��������B<p>
-<b>�K���m�F</b><br>
-�K���URL�̓��e���t���[���ɕ\�����܂��B<br>
-����URL�����͂���Ă���ꍇ�́A���͂��ꂽURL���ׂĂ�\�����܂��B<p>
-<b>�J�n 1</b><br>
-��ʓI�ȓc��C�Ɏg���Ă�����@�ŖK�₵�܂��B<br>
-�C�吔�̐��������������A�K��Ԋu�ōX�V���܂��B<br>
-�C�吔��1�̎��́A���K���q�c��C�Ɠ������@�ōX�V���܂��B<p>
-<b>�J�n 2</b><br>
-SpamKiller�Ƃ�����ʃA�N�Z�X�c�[���Ɏg�p����Ă���X�N���v�g�ł��B<br>
-onload�������g�p���āA�y�[�W�̃��[�h���I����Ă���A�K��Ԋu�b��ɍX�V���܂��B<br>
-�J�n1�Ɣ�ׂ�ƁA���ʂ������A�U���͂������悤�Ɏv���܂��B<br>
-�������A�y�[�W�̃��[�h���I���܂�(�y�[�W�����[�h�����܂�?)�X�V���n�܂�Ȃ��̂ŁA�����C���C�����邩������Ȃ��ł��B<br>
-�C�吔��1�̎��́A������SpamKiller�����ōX�V���܂��B<p>
-<b>�J�n 3</b><br>
-Attacked��e���_�u���_�u���c��C�ȂǁA��r�I�ŋ߂̓c��C�Ɏg���Ă���X�N���v�g�ł��B<br>
-�C�吔�̐��������������A�K��Ԋu�ŏ�����������ԂɍX�V���܂��B<br>
-�A�N�Z�X���Ȃ��烍�[�h�ł���_�ł́A�U���͂������Ǝv���܂��B<br>
-�C�吔��1�̎��́A�J�n1�Ɠ������A���K���q�c��C�Ɠ������@�ōX�V���܂��B<p>
-<b>�K���~</b><br>
-�X�V���~���܂��B<p>
-<b>�N���A</b><br>
-���͂��ꂽ���ƃt���[���ɕ\�����ꂽ���e�����ׂă��Z�b�g���܂��B<p>
-<b>�ŏI����</b><br>
-�t���[���ŊJ�n1�A�J�n2�A�J�n3�A�E�B���h�E�ŊJ�n1�A�J�n2�A�J�n3�̖K��𓯎��ɍs���܂��B<br>
-�\�����鏬���̐��͖C�吔��6�{�ɂȂ�܂��B<br>
-CPU�ւ̕��ׂ������̂ŁA�ꍇ�ɂ���Ă̓t���[�Y���邩������܂���B<br>
-���̂��߁A�Ԉ���ċN�����Ȃ��悤�ɁA���S���u��݂��Ă���܂��B<br>
-3�̉����{�^����S�ĉ����ƁA�ŏI���킪�N���ł���悤�ɂȂ�܂��B<br>
-�Ȃ��A�ŏI���킾����Ƃ����āA�K�������������ʂ�������킯�ł͂���܂���B<br>
-�g�p�́A�F����̔��f�ɔC���܂��B<p>
+\をつけたときの挙動はわかりにくいのですが、スクリプトを見ればわかるとおり、<br>
+『先頭から検索していって、\があったら次の文字は検索から除外して、検索を続行する』<br>
+ですので、\\*と入力したときの2番目の\は、1番目の\で除外されてしまうので、*が置き換えされるわけです。<br>
+\\\*と入力した場合は、1番目の\で2番目の\が除外され、3番目の\で*を除外するので、\*となるわけです。<br><br>
+とりあえず、わかりにくい説明でしたが、いろいろと使ってみてください。<p>
+<b>訪問先確認</b><br>
+訪問先URLの内容をフレームに表示します。<br>
+複数URLが入力されている場合は、入力されたURLすべてを表示します。<p>
+<b>開始 1</b><br>
+一般的な田代砲に使われている方法で訪問します。<br>
+砲門数の数だけ小窓を作り、訪問間隔で更新します。<br>
+砲門数が1の時は、メガ粒子田代砲と同じ方法で更新します。<p>
+<b>開始 2</b><br>
+SpamKillerという大量アクセスツールに使用されているスクリプトです。<br>
+onload属性を使用して、ページのロードが終わってから、訪問間隔秒後に更新します。<br>
+開始1と比べると、無駄が無く、攻撃力が高いように思えます。<br>
+しかし、ページのロードが終わるまで(ページがロードされるまで?)更新が始まらないので、少しイライラするかもしれないです。<br>
+砲門数が1の時は、同じくSpamKiller方式で更新します。<p>
+<b>開始 3</b><br>
+Attackedやテラダブルダブル田代砲など、比較的最近の田代砲に使われているスクリプトです。<br>
+砲門数の数だけ小窓を作り、訪問間隔で小窓を一つずつ順番に更新します。<br>
+アクセスしながらロードできる点では、攻撃力が高いと思われます。<br>
+砲門数が1の時は、開始1と同じく、メガ粒子田代砲と同じ方法で更新します。<p>
+<b>訪問停止</b><br>
+更新を停止します。<p>
+<b>クリア</b><br>
+入力された情報とフレームに表示された内容をすべてリセットします。<p>
+<b>最終兵器</b><br>
+フレームで開始1、開始2、開始3、ウィンドウで開始1、開始2、開始3の訪問を同時に行います。<br>
+表示する小窓の数は砲門数の6倍になります。<br>
+CPUへの負荷が高いので、場合によってはフリーズするかもしれません。<br>
+そのため、間違って起動しないように、安全装置を設けてあります。<br>
+3つの解除ボタンを全て押すと、最終兵器が起動できるようになります。<br>
+なお、最終兵器だからといって、必ずしも高い効果が得られるわけではありません。<br>
+使用は、皆さんの判断に任せます。<p>
 <strong>- Q&A -</strong><p>
-<b>Q</b>.�K���m�F���s���Ƃ��A"�y�[�W about:blank ���J���Ă��܂�"�ƕ\������邱�Ƃ�����B<br>
-<b>A</b>.�t���[�������������邽�߂ɕK�v�ȍ�Ƃł��B�d�l�ł��B<p>
-<b>Q</b>.�K���̃y�[�W�ɏ���ɔ�΂����B<br>
-<b>A</b>.�C�����C���t���[���ŕ\�������ƁA�\�������y�[�W�ɔ�΂��X�N���v�g������܂��B<br>
-����āA���A�N�Z�X���������Ŕ�΂���Ă��܂��A�K�₪�ł��Ȃ��Ȃ��Ă��܂��܂��B<br>
-Window���[�h�ł́A���̃X�N���v�g���g�p����Ă��Ă����삷��̂ŁA<br>
-���̂悤�ȃy�[�W�ɖK�₷��Ƃ���Window���[�h�őΏ����Ă��������B<br>
-�Ȃ��A��~����Ƃ��́Aboon�{�̂̃y�[�W���X�V���Ă��������B<br>
-(boon�͒�~���ɖK���̃T�C�g���t���[���ɕ\������̂ŁA�����h�����߂ɍs���B)<br>
-�����AWindow���[�h�ł���~����X�N���v�g�����ꂽ�ꍇ�́A��������HTML�^�̓c��C�̌��E�ł��B<br>
-Proxomitron�̂悤��HTML������������\�t�g�ŃX�N���v�g��ׂ����A<br>
-�A�v���P�[�V�����^�̓c��C���g�p����Ȃǂ��Ă��������B<p>
+<b>Q</b>.訪問先確認を行うとき、"ページ about:blank を開いています"と表示されることがある。<br>
+<b>A</b>.フレームを初期化するために必要な作業です。仕様です。<p>
+<b>Q</b>.訪問先のページに勝手に飛ばされる。<br>
+<b>A</b>.インラインフレームで表示されると、表示したページに飛ばすスクリプトがあります。<br>
+よって、一回アクセスしただけで飛ばされてしまい、訪問ができなくなってしまいます。<br>
+Windowモードでは、そのスクリプトが使用されていても動作するので、<br>
+そのようなページに訪問するときはWindowモードで対処してください。<br>
+なお、停止するときは、boon本体のページを更新してください。<br>
+(boonは停止時に訪問先のサイトをフレームに表示するので、それを防ぐために行う。)<br>
+もし、Windowモードでも停止するスクリプトが現れた場合は、さすがにHTML型の田代砲の限界です。<br>
+ProxomitronのようなHTMLを書き換えるソフトでスクリプトを潰すか、<br>
+アプリケーション型の田代砲を使用するなどしてください。<p>
 <s>
-<b>Q</b>.Opera�Ȃ�ł������܂������܂���B<br>
-<b>A</b>.�g�����ɂ������Ă���悤�ɁA�u���E�U�̎��ʂ�"Opera�Ƃ��ĔF��������"�ɂ��Ă��������B<br>
-�c�[�����N�C�b�N�ݒ聨Opera�Ƃ��ĔF�������� �ł��ݒ�ł��܂��B<br>
-(�u���E�U�ɂ���Ď��s����X�N���v�g���ς���Ă���̂ŁAOpera��IE�̃}�l�����ꂽ�炤�܂������Ȃ��킯�ł��ˁB)</s><br>
-Opera�̔��ʕ��@��ύX���܂����BIE�ɋU�����Ă������܂��B<br>
-ua.ini�ŋU�����Ă��Awindow.opera�Ŕ��ʂł��Ă�H<p>
-<b>Q</b>.�g���ɂ����B<br>
-<b>A</b>.�����܂ő��@�\��ڎw���č���Ă���̂ŁA�ݒ荀�ڂ������ł��B�Ƃ肠�����A�d�l�ł��B<p>
-<b>���̃c�[�����g�p��������肪�������Ă��A�ӔC�͈�؎��܂���B<br>
-���ꂮ����A���ȐӔC�ł��肢���܂��B</b>
+<b>Q</b>.Operaなんですがうまく動きません。<br>
+<b>A</b>.使い方にも書いてあるように、ブラウザの識別を"Operaとして認識させる"にしてください。<br>
+ツール→クイック設定→Operaとして認識させる でも設定できます。<br>
+(ブラウザによって実行するスクリプトが変わってくるので、OperaにIEのマネをされたらうまく動かないわけですね。)</s><br>
+Operaの判別方法を変更しました。IEに偽装しても動きます。<br>
+ua.iniで偽装しても、window.operaで判別できてる？<p>
+<b>Q</b>.使いにくい。<br>
+<b>A</b>.あくまで多機能を目指して作っているので、設定項目が多いです。とりあえず、仕様です。<p>
+<b>このツールを使用し何か問題が発生しても、責任は一切取りません。<br>
+くれぐれも、自己責任でお願いします。</b>
             </span>
         </center>
     </body>
