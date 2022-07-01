@@ -54,44 +54,64 @@
         </header>
         
         <div class="l-pageWrap">
-            <div id="header" class="obiSita">
-                <div class="hd_area ">
-                    <a href="https://it-army-japan-5ch.github.io/">
-                        <div class="hptn3 ">
-                            <h1><img src="./files/title_AI5_.png" alt="IT ARMY of 5ch(IA5)のシンボルマーク"></h1>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            
             <script src="./files/header_height_auto.js.ダウンロード"></script>
             <script>setImgHeight();</script>
             <div class="articleBox mgb_20 ">
                 <div id="container">
                     <div class="text_area mgb_20">
-                        <h2>DDoS攻撃とMHDDoSってなぞや？(前置き)</h2>
+                        <h2>MHDDoSってなんぞや？(前置き)</h2>
                     </div>
                     <div class="text_area mgb_20">
-                        <p class="mchar">DDoS攻撃とは、超絶簡単に言いますと田代砲の上位互換です。ここではウクライナIT軍でも使用が推奨されるDDoS攻撃ツール、MHDDoSのインストール方法から使い方まで解説していこうと思います。</p>
+                        <p class="mchar">まずDDoS攻撃とは、超絶簡単に言いますと田代砲の上位互換です。DDoSツールには様々な種類がありMiraiやAnonDiscordなどあり様々です。</p>
+                        <p class="mchar">ここではウクライナIT軍でも使用が推奨されるDDoSツール、MHDDoSのインストール方法から使い方まで解説していこうと思います。</p>
                         <b>※Androidのみ解説となります。ご了承ください。</b>
                     </div>
 
                     <div class="text_area mgb_20">
-                        <h2>タシロシア砲の操作方法</h2>
+                        <h2>下準備</h2>
+                    </div>
+                    <div class="text_area mgb_20">
+                        <p class="mchar">では早速TermuxというLinuxエミュレータをインストールします。</p>
+                        <p class="mchar">ここのURLからどうぞ <a href="https://play.google.com/store/apps/details?id=com.termux&gl=jp" >Termux</a></p>
                     </div>
                     <div class="img_area mgb_20 img_extension extension_position_center">
                         <a href="./files/477_569_.png" class="imgbd img80 bd_n posi_c" data-fancybox="">
                             <div class="imgtrm">
-                                <img src="./files/477_569_.png" alt="タシロシア砲の使用例">
+                                <img src="./files/Screenshot_2022.07.01_19.32.25.754.png" alt="Termuxインストール前の画像">
                             </div>
                         </a>
                     </div>
-
                     <div class="text_area mgb_20">
-                        <p class="mchar">
-                            <a href="https://ddosrussia.netlify.app/"><del>https://ddosrussia.netlify.app/</del></a><br>
-                            <a href="https://it-army-japan-5ch.github.io/tashirosia.html">https://it-army-japan-5ch.github.io/tashirosia.html</a>にアクセスするだけです。こっちの方が簡単なので初心者におすすめです。
-                        </p>
+                        <p class="mchar">下の画像のようにインストールが終わりましたら開くを選択してアプリを開いてください。</p>
+                    </div>
+                    <div class="img_area mgb_20 img_extension extension_position_center">
+                        <a href="./files/477_569_.png" class="imgbd img80 bd_n posi_c" data-fancybox="">
+                            <div class="imgtrm">
+                                <img src="./files/Screenshot_2022.07.01_19.33.00.874.png" alt="Termuxインストール後の画像">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="text_area mgb_20">
+                        <p class="mchar">開くとかっこいい画面が出来ます。厨二心が揺さぶられますね。</p>
+                    </div>
+                    <div class="img_area mgb_20 img_extension extension_position_center">
+                        <a href="./files/477_569_.png" class="imgbd img80 bd_n posi_c" data-fancybox="">
+                            <div class="imgtrm">
+                                <img src="./files/Screenshot_2022.07.01_20.27.02.017.png" alt="Termuxを開いた時の画面">
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="text_area mgb_20">
+                        <h2>Pythonとgitをインストール</h2>
+                    </div>
+                    <div class="text_area mgb_20">
+                        <p class="mchar">それでは以下のコマンドを入力して決定で実行しましょう。</p>
+                        <b>pkg install root-repo</b><br>
+                        <b>pkg update</b><br>
+                        <b>pkg install python python3-pip git</b><br>
+                        <big>※どうやら2022/5/1から公式のリポジトリが使えない状態なのでその対処方法の後に解説します。</big>
+                        <p class="mchar">下の画像はコマンド入力したときの例です。</p>
                     </div>
                 </div>
             </div>
