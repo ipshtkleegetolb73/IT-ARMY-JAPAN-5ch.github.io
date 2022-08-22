@@ -1,2 +1,2 @@
 # IT-ARMY-JAPAN-5ch.github.io
-ここにこれた人はガチ勢
+ここにこれた人はGitHubに詳しい人
